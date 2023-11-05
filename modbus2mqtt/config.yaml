@@ -20,16 +20,4 @@ ports:
   3000/tcp: null
 ports_description: 
   3000/tcp: Frontend tcp-listen port
-schema:
-  data_path: str,
-  mqtt:
-    server": str?
-    ca: str?
-    key: str?
-    cert: str?
-    user: str?
-    password: str?
-  serial:
-    port": str?
-    baudrate: int?
 image: modbus2mqtt/modbus2mqtt
