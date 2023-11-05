@@ -1,0 +1,32 @@
+name: "Modbus 2 MQTT"
+description: "Service converts RTU and TCP Modbus to MQTT"
+version: "1.0.0"
+slug: "modbus2mqtt"
+init: false
+image: modbus2mqtt/modbus2mqtt
+version: 1.0.0
+arch:
+  - armv7
+services :
+  - mqtt:want
+map: 
+  - share:rw
+  - config:rw
+  - ssl
+ports:
+  3000/tcp: null
+ports_description: 
+  3000/tcp: Frontend tcp-listen port
+schema:
+  data_path: str,
+  mqtt:
+    server": str?
+    ca: str?
+    key: str?
+    cert: str?
+    user: str?
+    password: str?
+  serial:
+    port": str?
+    baudrate: int?
+image: modbus2mqtt/modbus2mqtt
