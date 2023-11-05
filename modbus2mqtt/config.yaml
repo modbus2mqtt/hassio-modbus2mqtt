@@ -1,12 +1,15 @@
-name: "Modbus 2 MQTT"
+name: "modbus2mqtt"
 description: "Service converts RTU and TCP Modbus to MQTT"
 version: "1.0.0"
 slug: "modbus2mqtt"
-init: false
 image: modbus2mqtt/modbus2mqtt
-version: 1.0.0
 arch:
   - armv7
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
 services :
   - mqtt:want
 map: 
