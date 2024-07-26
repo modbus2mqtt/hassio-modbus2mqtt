@@ -1,6 +1,6 @@
 name: "modbus2mqtt"
 description: "Service converts RTU and TCP Modbus to MQTT"
-version: "1.0.0"
+version: "0.10.0"
 slug: "modbus2mqtt"
 image: modbus2mqtt/modbus2mqtt
 arch:
