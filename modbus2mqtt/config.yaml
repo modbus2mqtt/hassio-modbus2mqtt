@@ -15,7 +15,7 @@ services :
 map: 
   - share:rw
   - config:rw
-  - ssl
+  - ssl:rw
 ports:
   3000/tcp: null
 ports_description: 
