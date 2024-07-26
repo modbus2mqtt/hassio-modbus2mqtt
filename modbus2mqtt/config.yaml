@@ -18,6 +18,7 @@ map:
   - ssl:rw
 ports:
   3000/tcp: null
+  9229/tcp:9229
 ports_description: 
   3000/tcp: Frontend tcp-listen port
 image: modbus2mqtt/modbus2mqtt
