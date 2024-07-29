@@ -21,5 +21,5 @@ ports:
   9229/tcp: 9229
 ports_description: 
   3000/tcp: Frontend tcp-listen port
-homeassistant_api: true  
+hassio_api: true  
 image: modbus2mqtt/modbus2mqtt
