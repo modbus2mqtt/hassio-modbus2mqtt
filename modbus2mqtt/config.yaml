@@ -17,8 +17,9 @@ map:
   - config:rw
   - ssl:rw
 ports:
-  3000/tcp: null
+  3000/tcp: 3000
   9229/tcp: 9229
 ports_description: 
   3000/tcp: Frontend tcp-listen port
+homeassistant_api: true  
 image: modbus2mqtt/modbus2mqtt
