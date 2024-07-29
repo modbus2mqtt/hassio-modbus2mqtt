@@ -1,5 +1,5 @@
 name: "modbus2mqtt"
-description: "Service converts RTU and TCP Modbus to MQTT ssl:rw"
+description: "Service converts RTU and TCP Modbus to MQTT hassio_api"
 version: "0.10.0"
 slug: "modbus2mqtt"
 image: modbus2mqtt/modbus2mqtt
