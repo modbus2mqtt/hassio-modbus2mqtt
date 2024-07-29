@@ -1,5 +1,5 @@
 name: "modbus2mqtt"
-description: "Service converts RTU and TCP Modbus to MQTT hassio_role default"
+description: "Service converts RTU and TCP Modbus to MQTT from other"
 version: "0.10.0"
 slug: "modbus2mqtt"
 image: modbus2mqtt/modbus2mqtt
@@ -21,6 +21,10 @@ ports:
   9229/tcp: 9229
 ports_description: 
   3000/tcp: Frontend tcp-listen port
-hassio_api: true  
+hassio_api: true
 hassio_role: default
+homeassistant_api: true
+host_network: true
+auth_api: true
+uart: true
 image: modbus2mqtt/modbus2mqtt
