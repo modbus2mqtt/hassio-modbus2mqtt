@@ -1,30 +1,36 @@
-name: "modbus2mqtt"
-description: "Service converts RTU and TCP Modbus to MQTT from other"
-version: "0.10.0"
+name: "Modbus <-> MQTT"
+description: "Converter for both Directions: RTU and TCP Modbus to/from MQTT X"
+version: "0.12.0"
 slug: "modbus2mqtt"
-image: modbus2mqtt/modbus2mqtt
 arch:
-  - armv7
   - aarch64
   - amd64
-  - armhf
   - armv7
-  - i386
-services :
+services:
   - mqtt:want
-map: 
+map:
   - share:rw
   - config:rw
   - ssl:rw
-ports:
-  3000/tcp: 3000
-  9229/tcp: 9229
-ports_description: 
-  3000/tcp: Frontend tcp-listen port
 hassio_api: true
 hassio_role: default
 homeassistant_api: true
 host_network: true
-auth_api: true
 uart: true
-image: modbus2mqtt/modbus2mqtt
+webui: http://[HOST]:[PORT:3000]
+panel_icon: mdi:arrow-left-right-bold-outline
+init: false
+ingress: true
+ingress_port: 3000
+ingress_stream: true
+options:
+  ssl: true
+  certfile: fullchain.pem
+  keyfile: privkey.pem
+schema:
+  log_level: list(trace|debug|info|notice|warning|error|fatal)?
+  ssl: bool
+  certfile: str
+  keyfile: str
+  leave_front_door_open: bool?
+  max_old_space_size: int?
